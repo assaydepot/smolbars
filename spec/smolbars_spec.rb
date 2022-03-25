@@ -24,9 +24,8 @@ describe(Smolbars::Context) do
   describe "sanity check templates" do
     let(:t) { compile("a very uncool `template`") }
     it "should raise an exception on backticks in the template" do
-      expect { t }.to raise_error(RuntimeError)
+      expect { t }.to_not raise_error(RuntimeError)
     end
-
   end
 
   describe "loading Helpers" do

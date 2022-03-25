@@ -13,11 +13,8 @@ module Smolbars
     # hope the template passed in does not form invalid Ruby. So don't use templates with backtick characters without
     # manually escaping them
     def compile(template)
-      if template.include?("`")
-        raise RuntimeError.new("template cannot contain a backtick character '`'")
-      end
       handle = fn_handle
-      invocation = %Q{var #{handle} = Handlebars.compile(`#{template}`);}
+      invocation = %Q{var #{handle} = Handlebars.compile(`#{template.gsub('`', "\`")}`);}
       @js.eval(invocation)
       ::Smolbars::Template.new(self, handle)
     end
