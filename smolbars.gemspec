@@ -15,5 +15,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'handlebars-source', '~> 4'
   s.add_dependency 'mini_racer' # we used to say 0.6, but let's try letting users pick what works
   s.add_development_dependency 'rake', '~> 13'
-  s.add_development_dependency 'rspec', '~> 2.0'
+  s.add_development_dependency 'rspec', '~> 3.13'
 end
