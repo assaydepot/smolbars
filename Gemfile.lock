@@ -50,12 +50,8 @@ PLATFORMS
 
 DEPENDENCIES
   rake (~> 13)
-<<<<<<< HEAD
   rspec (~> 3.13)
-=======
-  rspec (~> 3.0)
   simplecov
->>>>>>> c06e565 (Added simplecov)
   smolbars!
 
 BUNDLED WITH
