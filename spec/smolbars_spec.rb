@@ -1,3 +1,9 @@
+require 'simplecov'
+SimpleCov.start do
+  add_filter '/spec/'
+  track_files 'lib/**/*.rb'
+end
+
 require 'smolbars'
 describe(Smolbars::Context) do
 
